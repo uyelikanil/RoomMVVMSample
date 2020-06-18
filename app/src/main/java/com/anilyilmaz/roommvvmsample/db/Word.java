@@ -1,4 +1,4 @@
-package com.anilyilmaz.roommvvmsample;
+package com.anilyilmaz.roommvvmsample.db;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

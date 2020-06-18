@@ -1,4 +1,4 @@
-package com.anilyilmaz.roommvvmsample;
+package com.anilyilmaz.roommvvmsample.ui;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.anilyilmaz.roommvvmsample.R;
+import com.anilyilmaz.roommvvmsample.adapter.WordListAdapter;
+import com.anilyilmaz.roommvvmsample.db.Word;
+import com.anilyilmaz.roommvvmsample.viewmodel.WordViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;

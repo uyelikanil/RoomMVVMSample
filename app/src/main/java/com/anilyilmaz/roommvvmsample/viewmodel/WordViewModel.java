@@ -1,17 +1,20 @@
-package com.anilyilmaz.roommvvmsample;
+package com.anilyilmaz.roommvvmsample.viewmodel;
 
 import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.anilyilmaz.roommvvmsample.db.Word;
+import com.anilyilmaz.roommvvmsample.repository.WordRepository;
+
 import java.util.List;
 
 public class WordViewModel extends AndroidViewModel {
 
-    private WordRepository mRepository;
+    public WordRepository mRepository;
 
-    private LiveData<List<Word>> mAllWords;
+    public LiveData<List<Word>> mAllWords;
 
     public WordViewModel (Application application) {
         super(application);
@@ -19,7 +22,7 @@ public class WordViewModel extends AndroidViewModel {
         mAllWords = mRepository.getAllWords();
     }
 
-    LiveData<List<Word>> getAllWords() { return mAllWords; }
+    public LiveData<List<Word>> getAllWords() { return mAllWords; }
 
     public void insert(Word word) { mRepository.insert(word); }
 }
