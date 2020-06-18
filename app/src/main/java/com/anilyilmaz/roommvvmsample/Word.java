@@ -10,7 +10,7 @@ public class Word {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    private int id;
+    public int id;
 
     @NonNull
     @ColumnInfo(name = "word")
