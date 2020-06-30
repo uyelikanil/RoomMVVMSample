@@ -22,4 +22,7 @@ public interface WordDao {
 
     @Query("SELECT * from word_table ORDER BY word ASC")
     LiveData<List<Word>> getAlphabetizedWords();
+
+    @Query("UPDATE word_table set word = :word where id = :id")
+    void update(int id, String word);
 }

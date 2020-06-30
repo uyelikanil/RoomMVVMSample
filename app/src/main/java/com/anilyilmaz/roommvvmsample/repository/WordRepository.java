@@ -37,4 +37,12 @@ public class WordRepository {
             mWordDao.insert(word);
         });
     }
+
+    // You must call this on a non-UI thread or your app will throw an exception. Room ensures
+    // that you're not doing any long running operations on the main thread, blocking the UI.
+    public void update(int id, String word) {
+        WordRoomDatabase.databaseWriteExecutor.execute(() -> {
+            mWordDao.update(id, word);
+        });
+    }
 }
